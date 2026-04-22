@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f3f5f7;
+  --card: #ffffff;
+  --text: #1c242c;
+  --accent: #1366d6;
+  --accent-2: #0f4ea3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 720px;
+  margin: 3rem auto;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+input {
+  border: 1px solid #bfc8d3;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+}
+
+button:hover:enabled {
+  background: var(--accent-2);
+}
+
+button.secondary {
+  background: #616f7f;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(19, 102, 214, 0.09);
+}
